@@ -61,7 +61,7 @@ public class PasslimitController {
 
 		dailyLimit.setDailyLimit(dailyLimitDetails.getDailyLimit());
 		dailyLimit.setCityName(dailyLimitDetails.getCityName());
-		dailyLimit.setDailyLimit(dailyLimitDetails.getDailyLimit());
+		dailyLimit.setDailyLimit(dailyLimitDetails.getDailyLimit()-1);
 		dailyLimit.setLimitDate(dailyLimitDetails.getLimitDate());
 		final Passlimit updateddailyLimit = dailyLimitRepository.save(dailyLimit);
 		return ResponseEntity.ok(updateddailyLimit);
